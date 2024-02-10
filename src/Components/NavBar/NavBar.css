@@ -1,0 +1,15 @@
+.navbar {
+    background-color: #333; /* ciemne tło */
+    padding: 10px 20px; /* dodatkowe wypełnienie */
+    font-size: 1.2em; /* większe litery */
+}
+
+.navbar-brand, .navbar-brand:hover, .navbar-nav .nav-link {
+    color: #fff; /* kolor tekstu */
+    padding: 0 10px; /* odstępy między linkami */
+    text-decoration: none; /* brak efektu podkreślenia */
+}
+
+.navbar-nav .nav-link:hover {
+    text-decoration: none; /* brak efektu podkreślenia przy najechaniu myszą */
+}
