@@ -31,8 +31,11 @@ const MyProject = () => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
-                const data = await response.json();
-                setProject(data);
+
+                if (response.data != null) {
+                    const data = await response.json();
+                    setProject(data);
+                }
             } catch (error) {
                 console.error('Error fetching project:', error);
             }
@@ -41,7 +44,6 @@ const MyProject = () => {
         fetchProject();
     }, []);
 
-    // Format timestamp to a readable format
     const formatTimestamp = (timestamp) => {
         const date = new Date(timestamp);
         return `${date.toLocaleDateString()} ${date.toLocaleTimeString()}`;

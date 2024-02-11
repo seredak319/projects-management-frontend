@@ -8,6 +8,8 @@ import {Provider} from "react-redux";
 import MyProject from "./Projects/MyProject";
 import {RequireAuth} from "./Components/Auth/RequireAuth";
 import LoginPage from "./Components/Auth/login/LoginPage";
+import RegisterPage from "./Components/Auth/register/RegisterPage";
+import AddProject from "./Projects/AddProject";
 
 function App() {
     return (
@@ -18,6 +20,8 @@ function App() {
                     <Route path='/projects' element={<RequireAuth>{<Projects/>}</RequireAuth>}/>
                     <Route path='/my-project' element={<RequireAuth>{<MyProject/>}</RequireAuth>}/>
                     <Route path='/login' element={<LoginPage />}/>
+                    <Route path='/register' element={<RegisterPage />}/>
+                    <Route path='/add-project' element={<RequireAuth>{<AddProject/>}</RequireAuth>}/>
                 </Routes>
         </Provider>
     );

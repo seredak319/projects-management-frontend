@@ -4,7 +4,8 @@ import {useNavigate} from "react-router-dom";
 const initialState = {
     isAuthenticated: false,
     userId: null,
-    username: null
+    username: null,
+    isAdmin: false
 };
 
 
@@ -17,6 +18,12 @@ const authSlice = createSlice({
             state.isAuthenticated = true
             let retrievedUserId = action.payload.userId
             let retrievedUsername = action.payload.username
+
+            if (retrievedUserId === 1) {
+                console.log("Im Admin")
+                state.isAdmin = true
+            }
+
             state.userId = retrievedUserId
             state.username = retrievedUsername
             console.log("SuccessfulLogin user with id {}", retrievedUserId)
@@ -25,6 +32,7 @@ const authSlice = createSlice({
             state.isAuthenticated = false
             state.userId = null
             state.username = null
+            state.isAdmin = false
         }
     }
 });

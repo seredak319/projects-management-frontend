@@ -13,3 +13,10 @@
 .navbar-nav .nav-link:hover {
     text-decoration: none; /* brak efektu podkreślenia przy najechaniu myszą */
 }
+
+.admin {
+    display: flex;
+    justify-content: center;
+    background-color: #ffa2a2;
+    font-weight: 500;
+}

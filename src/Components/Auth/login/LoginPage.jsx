@@ -77,9 +77,9 @@ const LoginPage = () => {
         <div className="container">
             <div className="auth-container">
                 <h2>Login</h2>
-                <div className="auth-form">
+                <div className="auth-form" type="form">
                     <label>Email:</label>
-                    <input type="username" value={username} onChange={(e) => handleLoginChange(e)}/>
+                    <input type="email" value={username} onChange={(e) => handleLoginChange(e)}/>
 
                     <label>Password:</label>
                     <input type="password" value={password} onChange={(e) => handlePasswordChange(e)}/>
