@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import './AddProject.css';
+import {useNavigate} from "react-router-dom";
 
 const AddProject = () => {
     const [title, setTitle] = useState('');
     const [text, setText] = useState('');
+    const navigate = useNavigate();
 
     const handleSave = async () => {
         try {
@@ -17,7 +19,7 @@ const AddProject = () => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
-            // Handle successful creation, such as navigation or showing a success message
+            navigate('/projects')
         } catch (error) {
             console.error('Error creating project:', error);
         }

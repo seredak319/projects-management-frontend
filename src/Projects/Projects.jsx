@@ -104,11 +104,11 @@ const Projects = () => {
                         <td>{project.text}</td>
                         <td>{project.isActive ? 'Active' : 'Inactive'}</td>
                         <td>
-                            {!isAdmin && (
+                            {!isAdmin &&(
                                 <button type='button' className={project.isActive ? 'btn-active' : 'btn-inactive'}
                                         onClick={() => handleChooseButton(project.id)}>Choose</button>
                             )}
-                            {isAdmin && (
+                            {isAdmin && project.isActive ? (
                                 <>
                                     <button type='button'
                                             className={project.isActive ? 'btn-active-edit' : 'btn-inactive'}
@@ -119,7 +119,7 @@ const Projects = () => {
                                             onClick={() => handleDeleteButton(project.id)}>Delete
                                     </button>
                                 </>
-                            )}
+                            ): isAdmin && (<div> No action to perform</div>)}
                         </td>
                     </tr>
                 ))}

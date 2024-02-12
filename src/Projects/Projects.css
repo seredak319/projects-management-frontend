@@ -111,7 +111,7 @@
 }
 
 .btn-inactive {
-    background-color: #f44336;
+    background-color: #919191;
     color: white;
     border: none;
     padding: 5px 10px;
@@ -119,8 +119,9 @@
     text-decoration: none;
     display: inline-block;
     font-size: 14px;
-    cursor: pointer;
     margin-right: 5px;
+    pointer-events: none;
+    cursor: not-allowed;
 }
 
 .edit-form {

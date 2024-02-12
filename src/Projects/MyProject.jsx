@@ -32,12 +32,14 @@ const MyProject = () => {
                     throw new Error('Network response was not ok');
                 }
 
-                if (response.data != null) {
+
                     const data = await response.json();
                     setProject(data);
-                }
+                    console.log("Poprawnie pobrano mój projekt")
+
+                console.log(response.data)
             } catch (error) {
-                console.error('Error fetching project:', error);
+                console.log('Not found');
             }
         };
 
